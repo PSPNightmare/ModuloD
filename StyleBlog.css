@@ -117,10 +117,9 @@ body {
 
 /* Style do "Sobre" */
 
-
 /* Introdução  */
 .Sobre {
-  color : #e1e4e8;
+  color: #e1e4e8;
   padding: 20px;
   margin-bottom: 50px;
   margin: 50px;
@@ -156,14 +155,14 @@ body {
 
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 colunas, uma fileira só */
-  grid-template-rows: 200px;             /* altura fixa da fileira */
+  grid-template-rows: 200px; /* altura fixa da fileira */
   gap: 8px;
 }
 
 .Galeria img {
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* corta a imagem mantendo a proporção, sem distorcer */
+  object-fit: cover; /* corta a imagem mantendo a proporção, sem distorcer */
   border-radius: 10px;
 }
 
@@ -181,13 +180,13 @@ body {
   font-family: Arial, sans-serif;
   text-decoration: none;
 }
- 
+
 .Curiosidades-conteudo {
   max-width: 760px;
   width: 100%;
   color: #e1e4e8;
 }
- 
+
 .Curiosidades-conteudo h2 {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 2.1rem;
@@ -196,7 +195,7 @@ body {
   border-bottom: 1px solid #2a3542;
   padding-bottom: 16px;
 }
- 
+
 .Curiosidades-conteudo > p {
   font-family: Georgia, "Times New Roman", serif;
   line-height: 1.75;
@@ -204,15 +203,15 @@ body {
   margin-bottom: 36px;
   max-width: 65ch;
 }
- 
+
 .tabela-curiosidades {
   width: 100%;
-  color : white;
+  color: white;
   border-collapse: collapse;
   border: 1px solid #263244;
   box-shadow: 0 0 40px rgba(90, 130, 170, 0.06);
 }
- 
+
 .tabela-curiosidades caption {
   text-align: left;
   font-size: 0.85rem;
@@ -220,7 +219,7 @@ body {
   margin-bottom: 12px;
   font-style: italic;
 }
- 
+
 .tabela-curiosidades th,
 .tabela-curiosidades td {
   padding: 18px 20px;
@@ -228,7 +227,7 @@ body {
   border-bottom: 1px solid #1e2733;
   vertical-align: top;
 }
- 
+
 .tabela-curiosidades thead th {
   background-color: #131a24;
   color: gold;
@@ -236,60 +235,174 @@ body {
   font-weight: normal;
   font-size: 1.5rem;
   border-bottom: 1px solid #3a4a5c;
-
 }
- 
+
 .tabela-curiosidades tbody td:first-child {
   width: 56px;
   color: #4a5b6e;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.1rem;
 }
- 
+
 .tabela-curiosidades tbody td:last-child {
   color: #aab6c2;
   line-height: 1.65;
 }
- 
+
 .tabela-curiosidades tbody td strong {
   color: #eef1f5;
   font-weight: 600;
 }
- 
+
 .tabela-curiosidades tbody tr:last-child td {
   border-bottom: none;
 }
- 
+
 .tabela-curiosidades tbody tr {
   transition: background-color 0.2s ease;
 }
- 
+
 .tabela-curiosidades tbody tr:hover {
   background-color: #141d29;
 }
- 
+
 .tabela-curiosidades tbody tr:hover td:first-child {
   color: gold;
 }
 
+@media (max-width: 1024px) {
+  .Cabecalho {
+    flex-direction: column;
+    column-gap: 0;
+    gap: 15px;
+  }
 
-@media(max-width: 1024px) {
+  .Cabecalho nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+  }
 
-    body {
-        background-color: blue;
-    }
+  .Introducao img,
+  .Introducao .FOTOBEMVINDO {
+    width: 65%;
+    margin: 20px auto;
+  }
 
-  .FOTOJOGO1, .FOTOJOGO2, .FOTOJOGO3, .FOTOJOGO4 {
-    width: 100%;
-    height: 200px;
-    border-radius: 20%;
-    margin-top: 100px;
-    margin: 100px;
+  .Introducao .FOTOJOGO1,
+  .Introducao .FOTOJOGO2,
+  .Introducao .FOTOJOGO3,
+  .Introducao .FOTOJOGO4 {
+    width: calc(45% - 20px);
+    height: 120px;
+    object-fit: cover;
+    margin: 10px;
+  }
+
+  .Introducao h2,
+  .Sobre {
+    margin: 30px;
+  }
+
+  .Galeria {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 200px);
+  }
+
+  .Curiosidades-conteudo,
+  .curiosidades-conteudo {
+    max-width: 100%;
   }
 }
 
+@media (max-width: 600px) {
+  .Cabecalho {
+    padding: 16px;
+  }
 
+  .Cabecalho h1 {
+    font-size: 1.4rem;
+  }
 
- 
+  .Cabecalho nav a {
+    font-size: 0.9rem;
+  }
 
+  .Introducao {
+    padding: 12px;
+  }
 
+  .Introducao h2 {
+    margin: 15px 0;
+    padding: 16px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .Introducao img,
+  .Introducao .FOTOBEMVINDO {
+    width: 90%;
+    margin: 15px auto;
+    border-radius: 6%;
+  }
+
+  .Introducao .FOTOJOGO1,
+  .Introducao .FOTOJOGO2,
+  .Introducao .FOTOJOGO3,
+  .Introducao .FOTOJOGO4 {
+    width: 85%;
+    height: auto;
+    object-fit: cover;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  .Sobre {
+    margin: 15px 10px;
+    padding: 18px;
+  }
+
+  .Sobre-Conteudo,
+  .Sobre li,
+  .Sobre p {
+    font-size: 16px;
+  }
+
+  .Galeria {
+    width: 92%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 180px);
+    gap: 12px;
+  }
+
+  .Curiosidades,
+  .curiosidades {
+    padding: 14px;
+  }
+
+  .Curiosidades-conteudo h2 {
+    font-size: 1.4rem;
+  }
+
+  .Curiosidades-conteudo > p {
+    font-size: 0.95rem;
+  }
+
+  .tabela-curiosidades {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tabela-curiosidades th,
+  .tabela-curiosidades td {
+    padding: 12px 14px;
+    font-size: 0.9rem;
+  }
+
+  .tabela-curiosidades thead th {
+    font-size: 1.15rem;
+  }
+}
