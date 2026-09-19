@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../MeuBLOG"
+		},
+		{
+			"path": "../ModuloDTUDO"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ModuloDBlog"
+	}
+}

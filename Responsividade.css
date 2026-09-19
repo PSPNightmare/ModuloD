@@ -1,0 +1,21 @@
+
+
+
+
+@media (max-width: 1024px) {
+
+    body {
+        background-color: blue;
+    }
+
+    .FOTOBEMVINDO {
+        width: 100%;
+        height: auto;
+        border-radius: 20%;
+        margin-top: 100px;
+        margin: 100px;
+    }
+
+
+
+}
